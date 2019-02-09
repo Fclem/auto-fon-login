@@ -138,7 +138,7 @@ def disconnect():
 if __name__ == '__main__':
     global auth_username, auth_password
     printT('Started')
-    
+
     try:
         if not auth_username:
             auth_username = base64.standard_b64encode(raw_input('Enter login email : '))

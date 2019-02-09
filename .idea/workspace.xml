@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="305c60f3-0ff5-484d-bf93-d7c92991d69e" name="Default Changelist" comment="cleanup">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,14 +17,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="140" column="4" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
+            <state relative-caret-position="153">
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="105" column="6" selection-start-line="105" selection-start-column="6" selection-end-line="105" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -60,6 +76,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/.idea/encodings.xml" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -79,6 +96,11 @@
             <path>
               <item name="auto-fon-login" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="auto-fon-login" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -163,7 +185,7 @@
       <updated>1549570750005</updated>
       <workItem from="1549570752921" duration="18379000" />
       <workItem from="1549713321749" duration="12683000" />
-      <workItem from="1549726365950" duration="942000" />
+      <workItem from="1549726365950" duration="1182000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1549726514875</created>
@@ -190,7 +212,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32004000" />
+    <option name="totallyTimeSpent" value="32244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
@@ -287,9 +309,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/remote-mappings.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -313,11 +332,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="140" column="4" selection-start-line="140" selection-start-column="4" selection-end-line="140" selection-end-column="4" />
+        <state relative-caret-position="153">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="105" column="6" selection-start-line="105" selection-start-column="6" selection-end-line="105" selection-end-column="6" />
         </state>
       </provider>
     </entry>

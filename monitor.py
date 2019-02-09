@@ -5,14 +5,14 @@ from disconnect import disconnect_func
 
 def observe(interval=5):
     if inet_reachable():
-        printT('Monitoring until disconnection occurs (probe every ' + str(interval) + ' sec)...')
+        print_with_ts('Monitoring until disconnection occurs (probe every ' + str(interval) + ' sec)...')
 
         while inet_reachable():
             print_dot()
             time.sleep(interval)
-        print('')
+        print_and_log('')
 
-    printT('Not connected to internet !')
+    print_with_ts('Not connected to internet !')
     raise DisconnectedException('Disconnected !')
 
 def watcher():
@@ -23,16 +23,18 @@ def watcher():
             except DisconnectedException as e:
                 connect()
     except KeyboardInterrupt as e:
-        printT('Interrupted !', pre='\n')
+        print_with_ts('Interrupted !', pre='\n')
+        '''
         try:
             disconnect_func()
-            printT("Closing driver...")
-            driver.close()
         except Exception as e:
-            printT('### Ignoring ex on cleanup : ' + str(e))
+            print_with_ts('### Ignoring ex on cleanup : ' + str(e))
+        '''
+        print_with_ts("Closing driver...")
+        driver.close()
 
 if __name__ == '__main__':
-    printT('Started')
+    print_with_ts('Started')
 
     handle_creds()
 
@@ -40,4 +42,4 @@ if __name__ == '__main__':
 
     watcher()
 
-    printT('Done.')
+    print_with_ts('Done.')

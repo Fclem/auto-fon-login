@@ -6,20 +6,20 @@ random_disconnect_url = 'https://telekom.portal.fon.com/SRCDTA01/fon/972cdbd54e8
 
 def disconnect_func():
     # FIXME : untested
-    printT('Disconnecting...')
+    print_with_ts('Disconnecting...')
     button = driver.find_element_by_xpath(disconnect_button_xpath)
-    printT('### button : ' + str(button))
+    print_with_ts('### button : ' + str(button))
     button.click()
     if not inet_reachable():
-        printT('Now disconnected')
+        print_with_ts('Now disconnected')
         exit(0)
     else:
-        printT('Disconnection failed')
+        print_with_ts('Disconnection failed')
         exit(1)
 
 
 if __name__ == '__main__':
-    printT('Started')
+    print_with_ts('Started')
     get_driver()
     navigate(random_disconnect_url)
     disconnect_func()

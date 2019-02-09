@@ -5,8 +5,6 @@ import sys
 import getpass
 import datetime
 from selenium import webdriver
-# from selenium.webdriver.chrome.webdriver import WebDriver as ChromeWebD
-# import socket
 
 class DisconnectedException(BaseException):
     pass
@@ -25,12 +23,9 @@ final_screenshot_path = '/home/clem/final.png'
 login_tab_class_name = 'tab-login-hotspot'
 username_input_field_name = 'username'
 password_input_field_name = 'password'
-# connect_button_class_name = 'dtag-button-connect'
 
 login_submit_button_xpath = '//*[@id="tab-tab-login-hotspot"]/div[1]/div/form/button'
 disconnect_button_xpath = '//*[@id="top-section"]/div/div[6]/div[3]/div[1]/div[4]/a[3]/span'
-# loaded_button_xpath = '//*[@id="top-section"]/div/div[6]/div[3]/div[1]/div[3]/a[1]'
-#find_in_logged_in_url = 'res=postaccessportal'
 
 os.environ['PATH'] += ':' + chrome_driver_base_path
 
@@ -107,7 +102,6 @@ def connect():
         # TODO : check for invalid creds message
         printT('Waiting for inet access confirmation...')
 
-        # if driver.find_element_by_xpath(loaded_button_xpath):
         while not inet_reachable():
             print '.',
             time.sleep(1)
@@ -128,6 +122,7 @@ def connect():
         printT('Saved state screenshot to ' + last_screenshot_path)
 
 def disconnect():
+    # FIXME : untested
     printT('Disconnecting...')
     button = driver.find_element_by_xpath(disconnect_button_xpath)
     printT('### button : ' + str(button))

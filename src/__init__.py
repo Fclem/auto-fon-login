@@ -66,17 +66,21 @@ def save_password():
     if save_credentials_to_file and auth_password.strip():
         save_to_file(password_save_file, auth_password)
 
+def do_log(text, end='\n'):
+    with open(log_file_path, 'a') as my_log:
+        my_log.write(text + end)
+
 def print_and_log(text, **kwargs):
     print(text, **kwargs)
-    with open(log_file_path, 'a') as my_log:
-        my_log.write(text + '\n')
+    do_log(text)
 
-def print_with_ts(text, pre=''):
+def print_with_ts(text, pre='', **kwargs):
     time = str(datetime.datetime.now())
-    print_and_log(pre + '[' + time + '] ' + text)
+    print_and_log(pre + '[' + time + '] ' + text, **kwargs)
 
 def print_dot():
-    print_and_log('.', end='')
+    print('.', end='')
+    do_log('.', end='')
     sys.stdout.flush()
 
 def inet_reachable():
@@ -117,7 +121,7 @@ def handle_creds():
         auth_password = load_password()
         while not auth_password:
             if save_credentials_to_file:
-                print_and_log('WARNING : theses credentials will be stored on disk as CLEARTEXT.')
+                print('WARNING : theses credentials will be stored on disk as CLEARTEXT.')
             auth_password = base64.standard_b64encode(getpass.getpass('Enter login password : '))
             save_password()
 
